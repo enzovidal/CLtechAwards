@@ -1,19 +1,19 @@
-JQuery(window).load(function(){
+$(window).load(function(){
 
-	if (JQuery(window).width()<900) {
-		JQuery('#nav').hide();
+	if ($(window).width()<900) {
+		$('#nav').hide();
 	};
 
-	JQuery(window).resize(function(){
-		var ancho = JQuery(window).width();
+	$(window).resize(function(){
+		var ancho = $(window).width();
 		if (ancho < 900) {
-			JQuery('#nav').hide();
+			$('#nav').hide();
 		}else{
-			JQuery('#nav').show();
+			$('#nav').show();
 		}
 	});
 
-	JQuery('.opMenu').click(function(){
-		JQuery('#nav').slideToggle();
+	$('.opMenu').click(function(){
+		$('#nav').slideToggle();
 	});
 });
