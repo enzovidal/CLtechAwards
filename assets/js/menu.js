@@ -1,19 +1,19 @@
-$(window).load(function(){
+JQuery(window).load(function(){
 
-	if ($(window).width()<900) {
-		$('#nav').hide();
+	if (JQuery(window).width()<900) {
+		JQuery('#nav').hide();
 	};
 
-	$(window).resize(function(){
-		var ancho = $(window).width();
+	JQuery(window).resize(function(){
+		var ancho = JQuery(window).width();
 		if (ancho < 900) {
-			$('#nav').hide();
+			JQuery('#nav').hide();
 		}else{
-			$('#nav').show();
+			JQuery('#nav').show();
 		}
 	});
 
-	$('.opMenu').click(function(){
-		$('#nav').slideToggle();
+	JQuery('.opMenu').click(function(){
+		JQuery('#nav').slideToggle();
 	});
 });

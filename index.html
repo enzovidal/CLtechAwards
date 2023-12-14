@@ -102,18 +102,14 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="assets/js/menu.js"></script>
     <script>
-        $(document).ready(function(){
-        $("a").on('click', function(event) {
-        
+        jQuery(document).ready(function(){
+        jQuery("a").on('click', function(event) {
             if (this.hash !== "") {
             event.preventDefault();
-
             var hash = this.hash;
-        
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
+            jQuery('html, body').animate({
+                scrollTop: jQuery(hash).offset().top
             }, 800, function(){
-        
                 window.location.hash = hash;
             });
             } 
