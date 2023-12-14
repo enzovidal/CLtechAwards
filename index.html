@@ -19,18 +19,20 @@
                     <img src="assets/img/logo-cl-tech-awards-white.svg" alt="">
                 </a>
             </div>
-            <ul class="nav">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">CATEGORÍAS</a></li>
-                <li><a href="#">NOSOTROS</a></li>
-                <li><a href="#">MEDIA PARTNERS</a></li>
-                <li><a href="#">CONTACTO</a></li>
+            
+            <div class="opMenu"></div>
+            <ul id="nav" class="nav">
+                <li><a href="#hero">HOME</a></li>
+                <li><a href="#nominados-publico">CATEGORÍAS</a></li>
+                <li><a href="#nosotros">NOSOTROS</a></li>
+                <li><a href="#media-partners">MEDIA PARTNERS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
             </ul>
             <div class="clear"></div>
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero scrollspy">
         <div class="container">
             <div class="row">
                 <div class="col m5">
@@ -47,7 +49,7 @@
         </div>
     </section>
 
-    <section id="nominados-publico">
+    <section id="nominados-publico" class="scrollspy">
         <div class="container">
             <h2>CATEGORÍAS <br>DEL PÚBLICO</h2>
                 <ul class="no-space">
@@ -66,7 +68,7 @@
         </div>
     </section>
 
-    <section id="nominados-medios" class="bg-gris">
+    <section id="nominados-medios" class="bg-gris scrollspy">
         <div class="container">
             <h2>CATEGORÍAS <br>DE LOS MEDIOS</h2>
                 <ul class="no-space center">
@@ -85,7 +87,7 @@
         </div>
     </section>
 
-    <section id="nosotros">
+    <section id="nosotros" class="scrollspy">
         <div class="container">
             <h2>NOSOTROS</h2>
             <p>Esta es la primera versión de los CL.Tech Awards y estará llena de sorpresas, haciendo partícipe a la audiencia que sigue a los canales que difundirán la premiación. La primera y más importante es que existirá una votación popular en la web https://sologamer.cl/chile-tech-awards/, la segunda sorpresa es que tendremos saludos de todas partes del mundo y de rostros conocidos en la industria tech y gaming, entre otras sorpresas que se darán a conocer durante la emisión del evento.</p>
@@ -94,5 +96,26 @@
         </div>
     </section>
 
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("a").on('click', function(event) {
+        
+            if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+        
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+        
+                window.location.hash = hash;
+            });
+            } 
+        });
+        });
+    </script>
 </body>
 </html>
