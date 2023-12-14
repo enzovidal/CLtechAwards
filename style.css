@@ -89,14 +89,18 @@ h1 {
 
 .nav {
     background-color: #000000;
-    float: right;
     display: none;
-    margin-top: 5rem;
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .logo {
     width: 6rem;
-    float: left;
+    position: relative;
+    z-index: 1;
     padding: 1.3rem 0;
 }
 
@@ -264,9 +268,11 @@ h1 {
 
     .nav {
         background-color: #000000;
-        float: right;
-        margin-top: 1rem;
-        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        width: 100%;
+        display: inline-block;
     }
 
     .nav li {
